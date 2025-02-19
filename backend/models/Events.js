@@ -87,4 +87,4 @@
 
     const Events = new mongoose.model('event', eventSchema);
 
-    module.exports = {Events, competitionSchema};
+    module.exports = {Events};

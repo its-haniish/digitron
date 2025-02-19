@@ -1,16 +1,16 @@
 const express = require("express");
-const router = express.Router();
-const { createEvent, updateEvent, deleteEvent, getAllEvents } = require("../controllers/eventController");
+const eventRoutes = express.Router();
+const { createEvent, updateEvent, deleteEvent, getAllEvents, getEventById } = require("../controllers/event.controllers");
 
 // Create Event (POST)
-router
+eventRoutes
     .post("/event", createEvent)
 
     // Update Event (PUT)
     .put("/event/:id", updateEvent)
 
     // Delete Event (DELETE)
-    delete("/event/:id", deleteEvent)
+    .delete("/event/:id", deleteEvent)
 
     // Get All Events (GET) 
     .get("/events", getAllEvents)
@@ -19,4 +19,4 @@ router
     .get("/event/:id", getEventById)
 
 
-module.exports = eventRouter;
+module.exports = eventRoutes;

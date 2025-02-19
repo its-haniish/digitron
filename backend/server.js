@@ -1,7 +1,8 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const routes = require("./routes/routes"); 
+const eventRoutes = require("./routes/event.routes"); 
+const studentRoutes = require("./routes/student.routes");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -10,7 +11,8 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json());
 
 // Routes
-app.use("/api", routes); 
+app.use("/api/events", eventRoutes);
+app.use("/api/students", studentRoutes); 
 
 // Connect to MongoDB and Start the Server
 mongoose.connect(process.env.MONGO_URI)

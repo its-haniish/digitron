@@ -1,9 +1,9 @@
-# Event API Documentation
+# Event /api Documentation
 
 ### 1. Create an Event
 **Endpoint:**
 ```
-POST /event
+POST /api/events/event
 ```
 **Description:**
 Creates a new event record.
@@ -31,7 +31,7 @@ Creates a new event record.
 ### 2. Update an Event
 **Endpoint:**
 ```
-PUT /event/:id
+PUT /api/events/event/:id
 ```
 **Description:**
 Updates event details by ID.
@@ -56,7 +56,7 @@ Updates event details by ID.
 ### 3. Delete an Event
 **Endpoint:**
 ```
-DELETE /event/:id
+DELETE /api/events/event/:id
 ```
 **Description:**
 Deletes an event record by ID.
@@ -73,7 +73,7 @@ Deletes an event record by ID.
 ### 4. Get All Events
 **Endpoint:**
 ```
-GET /events
+GET /api/events/events
 ```
 **Description:**
 Retrieves all events.
@@ -90,7 +90,7 @@ Retrieves all events.
 ### 5. Get Event by ID
 **Endpoint:**
 ```
-GET /event/:id
+GET /api/events/event/:id
 ```
 **Description:**
 Retrieves an event by ID.
@@ -103,12 +103,12 @@ Retrieves an event by ID.
 ```
 
 
-# Student API Documentation
+# Student /api Documentation
 
 ### 1. Create a Student
 **Endpoint:**
 ```
-POST /student
+POST /api/students/student
 ```
 **Description:**
 Creates a new student record.
@@ -144,7 +144,7 @@ Creates a new student record.
 ### 2. Update a Student
 **Endpoint:**
 ```
-PUT /student/:id
+PUT /api/students/student/:id
 ```
 **Description:**
 Updates student details by ID.
@@ -169,7 +169,7 @@ Updates student details by ID.
 ### 3. Delete a Student
 **Endpoint:**
 ```
-DELETE /student/:id
+DELETE /api/students/student/:id
 ```
 **Description:**
 Deletes a student record by ID.
@@ -186,7 +186,7 @@ Deletes a student record by ID.
 ### 4. Get a Single Student
 **Endpoint:**
 ```
-GET /student/:id
+GET /api/students/student/:id
 ```
 **Description:**
 Retrieves a student record by ID.
@@ -203,7 +203,7 @@ Retrieves a student record by ID.
 ### 5. Get Teams
 **Endpoint:**
 ```
-GET /teams?teamName=CodeWarriors
+GET /api/students/teams?teamName=CodeWarriors
 ```
 **Description:**
 Retrieves teams based on a query parameter `teamName`.
@@ -220,7 +220,7 @@ Retrieves teams based on a query parameter `teamName`.
 ### 6. Get Participants
 **Endpoint:**
 ```
-GET /participants
+GET /api/students/participants
 ```
 **Description:**
 Retrieves all participants from the database.
