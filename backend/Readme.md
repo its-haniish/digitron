@@ -220,7 +220,7 @@ Retrieves teams based on a query parameter `teamName`.
 ### 6. Get Participants
 **Endpoint:**
 ```
-GET /api/students/participants
+GET /api/students/participants?competitionName=Hackathon
 ```
 **Description:**
 Retrieves all participants from the database.
