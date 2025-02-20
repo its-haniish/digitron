@@ -38,21 +38,21 @@
             type: [String],
             default: []
         },
-        organisers: {
+        organizers: {
             type: [{
-                organiserImage: {
+                organizerImage: {
                     type: String,
                     required: true
                 },
-                organiserName: {
+                organizerName: {
                     type: String,
                     required: true
                 },
-                organiserBatch: {
+                organizerBatch: {
                     type: String,
                     match: /^\d{4}-\d{2}$/ // Ensures format like "2021-24"
                 },
-                organiserPhone:{
+                organizerPhone:{
                     type: String,
                     required: true
                 }
@@ -75,7 +75,7 @@
                 },
                 competitionDescription: {
                     type: String,
-                    required: true
+                    // required: true
                 },
                 competitionTopics: {
                     type: [String],
