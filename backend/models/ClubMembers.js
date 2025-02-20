@@ -14,7 +14,7 @@ const clubMembersSchema = new mongoose.Schema({
         required: true
     },
     clubMemberPosition: {
-        type: true,
+        type: String,
         required: true
     },
     clubMemberSemester: {
