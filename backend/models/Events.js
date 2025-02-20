@@ -10,11 +10,11 @@
             default:   new Date().getFullYear(),
             required: true
         },
-        description:{
+        eventDescription:{
             type: String,
             required: true
         },
-        poster: {
+        eventPoster: {
             type: String,
             required: true
         },
@@ -25,6 +25,18 @@
         updatedAt: {
             type: Number,
             default: Date.now,
+        },
+        eventDate:{
+            type: String,
+            required: true
+        },
+        eventVenue: {
+            type: String,
+            required: true
+        },
+        eventRules: {
+            type: [String],
+            default: []
         },
         organisers: {
             type: [{
@@ -44,7 +56,8 @@
                     type: String,
                     required: true
                 }
-            }]
+            }],
+            default: []
         },
         competitions: {
             type:[{
@@ -52,9 +65,34 @@
                     type: String,
                     required: true
                 },
-                poster: {
+                competitionType: {
                     type: String,
                     required: true
+                },
+                competitionPoster: {
+                    type: String,
+                    required: true
+                },
+                competitionDescription: {
+                    type: String,
+                    required: true
+                },
+                competitionTopics: {
+                    type: [String],
+                    default: []
+                },
+                competitionRules:{
+                    type: [{
+                        ruleTitle: {
+                            type: String,
+                            required: true
+                        },
+                        rulePoints: {
+                            type: [String],
+                            required: true
+                        }
+                    }],
+                    default: []
                 },
                 winners:{
                     type: [{
