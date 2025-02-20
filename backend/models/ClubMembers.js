@@ -65,4 +65,6 @@ const clubMembersSchema = new mongoose.Schema({
 
 });
 
-module.exports = mongoose.model('ClubMembers', clubMembersSchema);
+const Members = mongoose.model('ClubMembers', clubMembersSchema);
+
+module.exports = {Members};

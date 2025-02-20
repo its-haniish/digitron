@@ -4,6 +4,7 @@
     const mongoose = require("mongoose");
     const eventRoutes = require("./routes/event.routes"); 
     const studentRoutes = require("./routes/student.routes");
+    const memberRoutes = require('./routes/members.routes');
 
     const app = express();
     const PORT = process.env.PORT || 8083;
@@ -18,7 +19,8 @@
 
     // Routes
     app.use("/events", eventRoutes);
-    app.use("/students", studentRoutes); 
+    app.use("/students", studentRoutes);
+    app.use('/members', memberRoutes);
 
     // Connect to MongoDB and Start the Server
     mongoose.connect(process.env.MONGO_URI)
