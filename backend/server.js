@@ -1,5 +1,6 @@
     require("dotenv").config();
     const express = require("express");
+    const cors = require("cors");
     const mongoose = require("mongoose");
     const eventRoutes = require("./routes/event.routes"); 
     const studentRoutes = require("./routes/student.routes");
@@ -9,6 +10,10 @@
 
     // Middleware
     app.use(express.json());
+    app.use(cors({
+        origin: ["https://digitron.rocks", "http://digitron.rocks"],
+        methods: ["GET", "POST", "PUT", "DELETE"]
+    }));    
 
     // Routes
     app.use("/events", eventRoutes);
