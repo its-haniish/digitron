@@ -5,7 +5,7 @@ const eventRoutes = require("./routes/event.routes");
 const studentRoutes = require("./routes/student.routes");
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8083;
 
 // Middleware
 app.use(express.json());
