@@ -10,10 +10,11 @@
 
     // Middleware
     app.use(express.json());
-    app.use(cors({
-        origin: ["https://digitron.rocks", "http://digitron.rocks"],
-        methods: ["GET", "POST", "PUT", "DELETE"]
-    }));    
+    app.use(cors());
+    // app.use(cors({
+    //     origin: ["https://digitron.rocks", "http://digitron.rocks"],
+    //     methods: ["GET", "POST", "PUT", "DELETE"]
+    // }));    
 
     // Routes
     app.use("/events", eventRoutes);
