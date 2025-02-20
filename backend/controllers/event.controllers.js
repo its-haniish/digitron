@@ -19,20 +19,22 @@ const updateEvent = async (req, res) => {
         const updatedEvent = await Events.findOneAndUpdate(
             { _id: id },
             { ...req.body, updatedAt: Date.now() },
-            { new: true } // Returns updated document
+            { new: true, runValidators: true } // Ensure it returns the updated document
         );
 
         if (!updatedEvent) {
             return res.status(404).json({ message: "Event not found" });
         }
 
-        res.status(200).json({ message: "Event updated successfully.", event: updatedEvent });
+
+        res.status(200).json({ message: "Event updated successfully." });
 
     } catch (error) {
         console.error("Error updating event:", error);
         res.status(500).json({ message: "Internal Server Error" });
     }
 };
+
 
 // Delete an Event by ID
 const deleteEvent = async (req, res) => {
