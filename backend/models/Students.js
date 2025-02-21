@@ -31,9 +31,9 @@ const studentSchema = new mongoose.Schema({
                 type: String,
                 required: true
             },
-            isPaid:{
-                type: Boolean,
-                default: false
+            paymentScreenshot:{
+                type: String,
+                required: true
             },
             teamName:{
                 type: String,
