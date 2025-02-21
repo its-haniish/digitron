@@ -10,7 +10,7 @@ const clubMembersSchema = new mongoose.Schema({
         required: true
     },
     clubMemberPhone: {
-        type: String,
+        type: Number,
         required: true
     },
     clubMemberPosition: {
@@ -22,8 +22,8 @@ const clubMembersSchema = new mongoose.Schema({
         required: true
     },
     clubMemberBatch: {
-        type: Number,
-        required: true
+        type: String,
+        match: /^\d{4}-\d{2}$/ // Ensures format like "2021-24"
     },
     about: {
         type: String,
