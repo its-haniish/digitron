@@ -44,7 +44,7 @@ import Loader from './Loader';
             <h1 className="text-4xl font-bold text-center">Upcoming Events</h1>
         </header>
 
-        <main className="container mx-auto px-4 w-full">  
+        <main className="container mx-auto px-10 w-full">  
         {loading && <Loader/>}
         {error && <div className="text-center text-red-500">Error: {error}</div>}
         {data && data.length ? (

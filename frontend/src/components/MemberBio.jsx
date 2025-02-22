@@ -57,7 +57,7 @@ const MemberBio = () => {
         </a>
       )}
       {data.socialMediaLinks.instagram && (
-        <a className='text-2xl hover:text-pink-400' href={data.socialMediaLinksinstagram} target="_blank" rel="noopener noreferrer" title="Instagram">
+        <a className='text-2xl hover:text-pink-400' href={data.socialMediaLinks.instagram} target="_blank" rel="noopener noreferrer" title="Instagram">
           <FaInstagram/>
         </a>
       )}

@@ -5,6 +5,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
+import { FiChevronsDown } from "react-icons/fi";
+
 import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -200,7 +202,7 @@ const Home = () => {
         {/* Circuit Animation */}
         <div
           ref={circuitRef}
-          className="absolute w-full h-full bg-[url('https://images.unsplash.com/photo-1739785890803-7a2191a37ef5?q=80&w=2070&auto=format&fit=crop')] bg-cover opacity-0"
+          className="absolute w-full h-full bg-[url('/loaderimage.jpeg')] bg-cover opacity-0"
         ></div>
 
         {/* Boot-Up Text */}
@@ -229,11 +231,11 @@ const Home = () => {
   <div
     class="absolute inset-0 duration-1000 opacity-60 transitiona-all bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-400 rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"
   ></div>
-  <a
+  <div
     role="button"
     class="group relative inline-flex items-center justify-center text-base rounded-xl bg-gray-900 px-8 py-3 font-semibold text-white transition-all duration-200 hover:bg-gray-800 hover:shadow-lg hover:-translate-y-0.5 hover:shadow-gray-600/30"
     title="payment"
-    href="#"
+    
     >Tech Fest 2025<svg
       aria-hidden="true"
       viewBox="0 0 10 10"
@@ -251,11 +253,23 @@ const Home = () => {
         class="transition group-hover:translate-x-[3px]"
       ></path>
     </svg>
-  </a>
+  </div>
 </div>
 
       </Link>
+      <div className="absolute z-10 top-[90vh] ">
+      {
+  loadedComplete ? (
+    <div className="flex flex-col items-center">
+      <p className="text-lg font-semibold">Scroll Down </p>
+      <FiChevronsDown className="text-3xl mt-2 animate-bounce" />
+    </div>
 
+  ) : (
+    <div className="homeloader"></div>
+  )
+}
+      </div>
 
     </div>
     <div className="flex items-center justify-center h-screen  px-4">
@@ -308,9 +322,9 @@ const Home = () => {
       </div>
       <div className="flex items-center justify-center h-screen ">
 
-<div class="flex items-end justify-center h-screen">
+<div class="flex items-end justify-center h-[150vh]">
   <div class="relative group">
-    <button
+    <Link target="_blank" to="https://chat.whatsapp.com/J3HDlet8yi2IXn5b4yfUUq"
       class="relative inline-block p-px font-semibold leading-6 text-white bg-neutral-900 shadow-2xl cursor-pointer rounded-2xl shadow-amber-900 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-yellow-600"
     >
       <span
@@ -334,7 +348,7 @@ const Home = () => {
           </svg>
         </div>
       </span>
-    </button>
+    </Link>
   </div>
 </div>
 
@@ -345,7 +359,7 @@ const Home = () => {
       <footer className="  bg-opacity-40 backdrop-blur-md text-center  py-4 mt-80 rounded-lg shadow-xl border border-white border-opacity-30">
         <p className="text-2xl font-semibold text-zinc-800
         ">
-          Developed by <span className="font-bold">Digitron </span>
+          Developed by <Link to="https://github.com/rishiyadav11" className="font-bold hover:text-sky-600 hover:underline">Rishi Yadav </Link> & <Link to="https://github.com/its-haniish" className="font-bold hover:text-sky-600 hover:underline">Hanish Kumar </Link>
         </p>
       </footer>
     </div>

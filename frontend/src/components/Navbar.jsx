@@ -59,6 +59,15 @@ const Navbar = () => {
 
           {/* Sidebar Links */}
           <ul className="flex flex-col mt-10 gap-5 ">
+          <li>
+              <Link
+                className="navbtn text-lg"
+                to="/"
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </Link>
+            </li>
             <li>
               <Link
                 className="navbtn text-lg"
