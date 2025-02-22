@@ -5,6 +5,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
+import { FiChevronsDown } from "react-icons/fi";
+
 import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -200,13 +202,13 @@ const Home = () => {
         {/* Circuit Animation */}
         <div
           ref={circuitRef}
-          className="absolute w-full h-full bg-[url('https://images.unsplash.com/photo-1739785890803-7a2191a37ef5?q=80&w=2070&auto=format&fit=crop')] bg-cover opacity-0"
+          className="absolute w-full h-full bg-[url('/loaderimage.jpeg')] bg-cover opacity-0"
         ></div>
 
         {/* Boot-Up Text */}
         <h1
           ref={textRef}
-          className="text-white text-5xl font-extrabold tracking-wider"
+          className="text-white mx-6 lg:mx-0 text-5xl font-extrabold tracking-wider"
         >
           Digitron - Where Code Meets Innovation
         </h1>
@@ -217,8 +219,8 @@ const Home = () => {
     <div className="absolute z-10 w-full ">
         <div className="flex w-full h-screen flex-col items-center gap-5 justify-center min-h-screen text-zinc-800">
       
-      <h1 ref={introRef} className="text-3xl md:text-6xl font-bold ">
-        Digitron: Igniting the Future of Code
+      <h1 ref={introRef} className="text-3xl text-center  md:text-6xl font-bold ">
+        Digitron: Inspire The Next
       </h1>
       <h2 ref={titleRef} className="text-lg md:text-2xl mt-4 text-gray-600">
         Presented by CRSSIET Jhajjar
@@ -229,11 +231,11 @@ const Home = () => {
   <div
     class="absolute inset-0 duration-1000 opacity-60 transitiona-all bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-400 rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"
   ></div>
-  <a
+  <div
     role="button"
     class="group relative inline-flex items-center justify-center text-base rounded-xl bg-gray-900 px-8 py-3 font-semibold text-white transition-all duration-200 hover:bg-gray-800 hover:shadow-lg hover:-translate-y-0.5 hover:shadow-gray-600/30"
     title="payment"
-    href="#"
+    
     >Tech Fest 2025<svg
       aria-hidden="true"
       viewBox="0 0 10 10"
@@ -251,44 +253,56 @@ const Home = () => {
         class="transition group-hover:translate-x-[3px]"
       ></path>
     </svg>
-  </a>
+  </div>
 </div>
 
       </Link>
+      <div className="absolute z-10 top-[90vh] ">
+      {
+  loadedComplete ? (
+    <div className="flex flex-col items-center">
+      <p className="text-lg font-semibold">Scroll Down </p>
+      <FiChevronsDown className="text-3xl mt-2 animate-bounce" />
+    </div>
 
+  ) : (
+    <div className="homeloader"></div>
+  )
+}
+      </div>
 
     </div>
     <div className="flex items-center justify-center h-screen  px-4">
         <p  className="text-lg md:text-xl text-center max-w-3xl">
           It all started with a simple question: <br />
-          <em>"What if coding wasn’t just a subject, but an adventure?"</em>
+          <em>"What if coding wasn’t just a <span className="text-2xl text-yellow-500">subject</span>, but an <span className="text-2xl text-blue-500">adventure</span>?"</em>
         </p>
       </div>
 
       <div className="flex flex-col items-center justify-center h-screen  text-zinc-900 space-y-6 px-6">
-        <h1 className="text-center text-xl font-bold">What We Do </h1>
+        <h1 className="text-4xl font-semibold mb-6 text-center uppercase">What We Do ? </h1>
         <div className="flex items-center">
           <span className="text-2xl mr-3">🔥</span>
-          <p className="text-xl">Workshops & Bootcamps – Master cutting-edge technologies.</p>
+          <p className="text-xl"> <span className=" font-semibold">Workshops & Bootcamps</span> – Master cutting-edge technologies.</p>
         </div>
         <div className="flex items-center">
           <span className="text-2xl mr-3">💡</span>
-          <p className="text-xl">Hackathons & Competitions – Solve real-world problems with code.</p>
+          <p className="text-xl"> <span className=" font-semibold">Hackathons & Competitions</span> – Solve real-world problems with code.</p>
         </div>
         <div className="flex items-center">
           <span className="text-2xl mr-3">🚀</span>
-          <p className="text-xl">Projects & Open Source – Build impactful software and contribute to the community.</p>
+          <p className="text-xl"> <span className=" font-semibold">Projects & Open Source</span> – Build impactful software and contribute to the community.</p>
         </div>
         <div className="flex items-center">
           <span className="text-2xl mr-3">🤝</span>
-          <p className="text-xl">Networking & Mentorship – Connect with industry experts and like-minded peers.</p>
+          <p className="text-xl"> <span className=" font-semibold">Networking & Mentorship</span> – Connect with industry experts and like-minded peers.</p>
         </div>
       </div>
 
       <div  className="flex flex-col items-center justify-center h-screen space-y-6 px-6">
-        <h2 className="text-4xl font-extrabold mb-6 text-center">Our Vision & Goals</h2>
+        <h2 className="text-4xl font-semibold mb-6 text-center uppercase">Our Vision & Goals</h2>
         <p className="text-xl max-w-3xl text-center">
-          At Digitron, we aim to inspire, educate, and nurture the next generation of tech innovators. Our vision is to create a platform
+          At <span className="text-blue-800 font-semibold uppercase">Digitron</span>, we aim to inspire, educate, and nurture the next generation of tech innovators. Our vision is to create a platform
           where students can transform their ideas into reality, explore new technologies, and work together on impactful projects.
         </p>
         <div className="flex flex-wrap justify-center space-x-6 mt-6">
@@ -307,28 +321,45 @@ const Home = () => {
         </div>
       </div>
       <div className="flex items-center justify-center h-screen ">
-        <button
-  type="submit"
-  className="flex justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
->
-🚀 Be a part of Digitron today!
-  <svg
-    className="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"
-    viewBox="0 0 16 19"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-      className="fill-gray-800 group-hover:fill-gray-800"
-    ></path>
-  </svg>
-</button>
+
+<div class="flex items-end justify-center h-[150vh]">
+  <div class="relative group">
+    <Link target="_blank" to="https://chat.whatsapp.com/J3HDlet8yi2IXn5b4yfUUq"
+      class="relative inline-block p-px font-semibold leading-6 text-white bg-neutral-900 shadow-2xl cursor-pointer rounded-2xl shadow-amber-900 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-yellow-600"
+    >
+      <span
+        class="absolute inset-0 rounded-2xl bg-gradient-to-r from-amber-500 via-cyan-500 to-sky-600 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+      ></span>
+      <span class="relative z-10 block px-6 py-3 rounded-2xl bg-neutral-950">
+        <div class="relative z-10 flex items-center space-x-3">
+          <span
+            class="transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-amber-300"
+            >Be a part of Digitron</span
+          >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-7 h-7 transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-amber-300"
+          >
+            <path
+              d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+            ></path>
+          </svg>
+        </div>
+      </span>
+    </Link>
+  </div>
+</div>
+
+
+
       </div>
 
       <footer className="  bg-opacity-40 backdrop-blur-md text-center  py-4 mt-80 rounded-lg shadow-xl border border-white border-opacity-30">
         <p className="text-2xl font-semibold text-zinc-800
         ">
-          Developed by <span className="font-bold">Digitron </span>
+          Developed by <Link to="https://github.com/rishiyadav11" className="font-bold hover:text-sky-600 hover:underline">Rishi Yadav </Link> & <Link to="https://github.com/its-haniish" className="font-bold hover:text-sky-600 hover:underline">Hanish Kumar </Link>
         </p>
       </footer>
     </div>
