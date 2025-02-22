@@ -290,31 +290,247 @@
 
 
 
+/* From Uiverse.io by TemplateVentures */ 
+.crazyloader {
+  width: 350px;
+  height: 180px;
+  border: none;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.crazyloading {
+  width: 100%;
+  height: 10px;
+  background: silver;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.crazyloading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 10px;
+  background: #002;
+  border-radius: 10px;
+  z-index: 1;
+  animation: loading 0.6s alternate infinite;
+}
+label {
+  color: #002;
+  font-size: 18px;
+  animation: bit 0.6s alternate infinite;
+}
 
-  .homeloader {
-    width: fit-content;
-    font-weight: bold;
-    font-family: monospace;
-    white-space: pre;
-    font-size: 30px;
-    line-height: 1.2em;
-    height: 1.2em;
-    overflow: hidden;
+@keyframes bit {
+  from {
+    opacity: 0.3;
   }
-  
-  .homeloader:before {
-    content: "Loading...\A⌰oading...\A⌰⍜ading...\A⌰⍜⏃ding...\A⌰⍜⏃⎅ing...\A⌰⍜⏃⎅⟟ng...\A⌰⍜⏃⎅⟟⋏g...\A⌰⍜⏃⎅⟟⋏☌...\A⌰⍜⏃⎅⟟⋏☌⟒..\A⌰⍜⏃⎅⟟⋏☌⟒⏁.\A⌰⍜⏃⎅⟟⋏☌⟒⏁⋔";
-    white-space: pre;
-    display: inline-block;
-    animation: l39 1s infinite steps(11) alternate;
+  to {
+    opacity: 1;
   }
-  
-  @keyframes l39 {
-    100% {
-      transform: translateY(-100%)
-    }
+}
+
+@keyframes loading {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 70%;
+  }
+  0% {
+    left: -25%;
+  }
+}
+
+
+/* From Uiverse.io by kennyotsu */ 
+.crazycard {
+  /* color used to softly clip top and bottom of the .words container */
+  --bg-color: none;
+  background-color: var(--bg-color);
+  padding: 1rem 2rem;
+  border-radius: 1.25rem;
+}
+.crazycrazyloader {
+  color: slategrey;
+  text-shadow: 1px 1px 1px pink;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 40px;
+  display: flex;
+}
+
+.crazywords {
+  overflow: hidden;
+  position: relative;
+}
+.crazywords::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.crazyword {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  text-shadow: 1px 1px 1px silver;
+  color: #956afa;
+  animation: spin_4991 4s infinite;
+}
+
+@keyframes spin_4991 {
+  10% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
   }
 
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  35% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
+  60% {
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
+  }
+
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
 
 
 
+
+
+
+/* From Uiverse.io by mrhyddenn */ 
+.hanishkumar {
+  --color: orange;
+  --sizeX: 30px;
+  --sizeY: 50px;
+  position: relative;
+  width: var(--sizeX);
+  height: var(--sizeY);
+  margin-left: var(sizeX / 2);
+  border: calc(var(--sizeX) / 10) solid var(--color);
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.hanishkumar::before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: var(--color);
+  border-radius: 100%;
+  animation: scrolldown-anim 2s infinite;
+  box-sizing: border-box;
+  box-shadow: 0px -5px 3px 1px #2a547066;
+}
+
+@keyframes scrolldown-anim {
+  0% {
+    opacity: 0;
+    height: 6px;
+  }
+
+  40% {
+    opacity: 1;
+    height: 10px;
+  }
+
+  80% {
+    transform: translate(0, 20px);
+    height: 10px;
+    opacity: 0;
+  }
+
+  100% {
+    height: 3px;
+    opacity: 0;
+  }
+}
+
+.hanishkumar_1 {
+  padding: 6px 0 0 0;
+  margin-left: -3px;
+  margin-top: 48px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hanishkumar_2 {
+  margin-top: -6px;
+  position: relative;
+  border: solid var(--color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
+.hanishkumar_2:nth-child(odd) {
+  animation: pulse54012 500ms ease infinite alternate;
+}
+
+.hanishkumar_2:nth-child(even) {
+  animation: pulse54012 500ms ease infinite alternate 250ms;
+}
+
+@keyframes pulse54012 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}

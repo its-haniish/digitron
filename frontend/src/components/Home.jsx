@@ -28,7 +28,7 @@ const Home = () => {
   // Preload images
   const preloadImages = () => {
     for (let i = initialIndex; i <= maxIndex; i++) {
-      const imageUrl = `./frame2/frame_${i.toString().padStart(4, "0")}.webp`;
+      const imageUrl = `./frame1/frame_${i.toString().padStart(4, "0")}.avif`;
       const img = new Image();  
       img.src = imageUrl;
       img.onload = () => {
@@ -202,7 +202,7 @@ const Home = () => {
         {/* Circuit Animation */}
         <div
           ref={circuitRef}
-          className="absolute w-full h-full bg-[url('/loaderimage.jpeg')] bg-cover opacity-0"
+          className="absolute w-full h-full bg-black bg-cover opacity-0"
         ></div>
 
         {/* Boot-Up Text */}
@@ -219,8 +219,9 @@ const Home = () => {
     <div className="absolute z-10 w-full ">
         <div className="flex w-full h-screen flex-col items-center gap-5 justify-center min-h-screen text-zinc-800">
       
-      <h1 ref={introRef} className="text-3xl text-center  md:text-6xl font-bold ">
-        Digitron: Inspire The Next
+      <h1 ref={introRef} className="uppercase text-3xl text-center  md:text-6xl font-bold flex flex-col items-center justify-center">
+        <span>DIGITRON</span>
+        <span className="text-sm ">Inspire The Next</span>
       </h1>
       <h2 ref={titleRef} className="text-lg md:text-2xl mt-4 text-gray-600">
         Presented by CRSSIET Jhajjar
@@ -260,13 +261,35 @@ const Home = () => {
       <div className="absolute z-10 top-[75vh] lg:top-[90vh] ">
       {
   loadedComplete ? (
-    <div className="flex flex-col items-center">
-      <p className="text-lg font-semibold">Scroll Down </p>
-      <FiChevronsDown className="text-3xl mt-2 animate-bounce" />
+    <div className="flex flex-col items-center mt-[-10vh] gap-2">
+      <p className="text-lg font-bold text-black  ">Scroll Down</p>
+        <div class="hanishkumar" >
+            <div class="hanishkumar_1">
+                <div class="hanishkumar_2"></div>
+                <div class="hanishkumar_2"></div>
+            </div>
+        </div>
     </div>
 
   ) : (
-    <div className="homeloader"></div>
+    <div className="mt-[-15vh]">
+      <div className="crazyloader">
+  <div className="crazycard">
+  <div className="crazycrazyloader">
+    <p>loading</p>
+    <div className="crazywords">
+      <span className="crazyword">future</span>
+      <span className="crazyword">events</span>
+      <span className="crazyword">roadmaps</span>
+      <span className="crazyword">skills</span>
+      <span className="crazyword">innovations</span>
+    </div>
+  </div>
+</div>
+
+        <div className="crazyloading"></div>
+      </div>
+    </div>
   )
 }
       </div>
@@ -324,6 +347,8 @@ const Home = () => {
 
 <div class="flex items-end justify-center h-[150vh]">
   <div class="relative group">
+
+
     <Link target="_blank" to="https://chat.whatsapp.com/J3HDlet8yi2IXn5b4yfUUq"
       class="relative inline-block p-px font-semibold leading-6 text-white bg-neutral-900 shadow-2xl cursor-pointer rounded-2xl shadow-amber-900 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-yellow-600"
     >
@@ -349,6 +374,8 @@ const Home = () => {
         </div>
       </span>
     </Link>
+
+
   </div>
 </div>
 
