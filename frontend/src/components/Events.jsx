@@ -26,7 +26,7 @@ import Loader from './Loader';
   
     }
 
-    console.log(data);
+    // console.log(data);
 
 
 
