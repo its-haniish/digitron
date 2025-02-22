@@ -1,17 +1,29 @@
-import Routing from './utils/Routing'
-import Navbar from './components/Navbar'
-import AnimatedCursor from "react-animated-cursor"
-
+import Routing from './utils/Routing';
+import Navbar from './components/Navbar';
+import AnimatedCursor from 'react-animated-cursor';
+import { useEffect, useState } from 'react';
 
 const App = () => {
-  
-  return (
-    <div className='text-black' >
-      <Navbar/>
-      <AnimatedCursor  />
-      <Routing/>
-    </div>
-  )
-}
+  const [isMobile, setIsMobile] = useState(false);
 
-export default App
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768); // Hide cursor for screens smaller than 768px
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
+  return (
+    <div className='text-black'>
+      <Navbar />
+      {!isMobile && <AnimatedCursor />}
+      <Routing />
+    </div>
+  );
+};
+
+export default App;
