@@ -29,7 +29,7 @@ const Members = () => {
   }, [baseUrl]);
 
   return (
-    <div>
+    <div className='select-none'>
       <header className="mt-20 py-6">
         <h1 className="text-4xl font-bold text-center mb-5">The Minds Behind Digitron</h1>
       </header>

@@ -18,7 +18,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className='text-black'>
+    <div className='text-black '>
       <Navbar />
       {!isMobile && <AnimatedCursor />}
       <Routing />

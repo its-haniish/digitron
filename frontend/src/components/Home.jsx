@@ -18,7 +18,7 @@ const Home = () => {
   const canvasRef = useRef(null);
   const parentDivRef = useRef(null);
 
-  const initialIndex = 1;
+  const initialIndex = 4;
   const maxIndex = 1216;
 
   const [vals, setVals] = useState({
@@ -193,7 +193,7 @@ const Home = () => {
 
 
   return (
-    <div ref={parentDivRef} className="w-full h-[550vh] relative select-none">
+    <div ref={parentDivRef} className="w-full  h-[550vh] relative select-none">
       {/* Loader Overlay */}
       <div
         ref={containerRef}
@@ -295,15 +295,18 @@ const Home = () => {
       </div>
 
     </div>
-    <div className="flex items-center justify-center h-screen  px-4">
-        <p  className="text-lg md:text-xl text-center max-w-3xl">
+    <div className=" h-screen flex items-center justify-center  px-4">
+<div className=" h-fit  bg-opacity-40 backdrop-blur-md rounded-lg shadow-xl border border-white border-opacity-30 p-5">
+<p  className="text-lg md:text-xl text-center max-w-3xl">
           It all started with a simple question: <br />
           <em>"What if coding wasn’t just a <span className="text-2xl text-yellow-500">subject</span>, but an <span className="text-2xl text-blue-500">adventure</span>?"</em>
         </p>
+</div>
       </div>
 
       <div className="flex flex-col items-center justify-center h-screen  text-zinc-900 space-y-6 px-6">
-        <h1 className="text-4xl font-semibold mb-6 text-center uppercase">What We Do ? </h1>
+      <div className="h-fit  bg-opacity-40 backdrop-blur-md rounded-lg shadow-xl border border-white border-opacity-30 p-20">
+      <h1 className="text-4xl font-semibold mb-6 text-center uppercase">What We Do ? </h1>
         <div className="flex items-center">
           <span className="text-2xl mr-3">🔥</span>
           <p className="text-xl"> <span className=" font-semibold">Workshops & Bootcamps</span> – Master cutting-edge technologies.</p>
@@ -321,15 +324,17 @@ const Home = () => {
           <p className="text-xl"> <span className=" font-semibold">Networking & Mentorship</span> – Connect with industry experts and like-minded peers.</p>
         </div>
       </div>
+      </div>
 
       <div  className="flex flex-col items-center justify-center h-screen space-y-6 px-6">
-        <h2 className="text-4xl font-semibold mb-6 text-center uppercase">Our Vision & Goals</h2>
+      <div className="h-fit  w-[90%] bg-opacity-40 backdrop-blur-md rounded-lg shadow-xl border flex flex-col items-center justify-center  border-white border-opacity-30 py-10 px-5 ">
+      <h2 className="text-4xl font-semibold mb-6 text-center uppercase">Our Vision & Goals</h2>
         <p className="text-xl max-w-3xl text-center">
           At <span className="text-blue-800 font-semibold uppercase">Digitron</span>, we aim to inspire, educate, and nurture the next generation of tech innovators. Our vision is to create a platform
           where students can transform their ideas into reality, explore new technologies, and work together on impactful projects.
         </p>
-        <div className="flex flex-wrap justify-center space-x-6 mt-6">
-          <div className="flex items-center space-x-3">
+        <div className="flex   justify-center space-x-6 mt-6">
+          <div className="flex items-center  space-x-3">
             <span className="text-2xl">🎯</span>
             <p className="text-xl">Empower students through hands-on coding experiences.</p>
           </div>
@@ -342,6 +347,7 @@ const Home = () => {
             <p className="text-xl">Encourage the development of cutting-edge technologies and innovations.</p>
           </div>
         </div>
+      </div>
       </div>
       <div className="flex items-center justify-center h-screen ">
 
