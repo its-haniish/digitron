@@ -28,8 +28,8 @@ const Home = () => {
   // Preload images
   const preloadImages = () => {
     for (let i = initialIndex; i <= maxIndex; i++) {
-      const imageUrl = `./frame2/frame_${i.toString().padStart(4, "0")}.jpg`;
-      const img = new Image();
+      const imageUrl = `./frame2/frame_${i.toString().padStart(4, "0")}.webp`;
+      const img = new Image();  
       img.src = imageUrl;
       img.onload = () => {
         imagesLoaded.current++;
