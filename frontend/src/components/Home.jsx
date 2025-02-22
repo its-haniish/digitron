@@ -19,7 +19,7 @@ const Home = () => {
   const parentDivRef = useRef(null);
 
   const initialIndex = 1;
-  const maxIndex = 2394;
+  const maxIndex = 1216;
 
   const [vals, setVals] = useState({
     currentIndex: initialIndex,
@@ -28,7 +28,7 @@ const Home = () => {
   // Preload images
   const preloadImages = () => {
     for (let i = initialIndex; i <= maxIndex; i++) {
-      const imageUrl = `./frame4/frame_${i.toString().padStart(4, "0")}.png`;
+      const imageUrl = `./frame2/frame_${i.toString().padStart(4, "0")}.jpg`;
       const img = new Image();
       img.src = imageUrl;
       img.onload = () => {
@@ -197,7 +197,7 @@ const Home = () => {
       {/* Loader Overlay */}
       <div
         ref={containerRef}
-        className="loader w-full h-screen absolute top-0 z-30 flex justify-center items-center"
+        className=" overflow-hidden w-full h-screen  absolute top-0 z-30 flex justify-center items-center"
       >
         {/* Circuit Animation */}
         <div
