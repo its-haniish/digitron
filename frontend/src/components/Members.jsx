@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Loader from './Loader';
 
 const Members = () => {
   const baseUrl = import.meta.env.VITE_BASEURLMEMBERS;
@@ -30,11 +31,12 @@ const Members = () => {
   return (
     <div>
       <header className="mt-20 py-6">
-        <h1 className="text-4xl font-bold text-center mb-5">All Digitron Club Members :-</h1>
+        <h1 className="text-4xl font-bold text-center mb-5">The Minds Behind Digitron</h1>
       </header>
 
       <main className="container mx-auto px-4 w-full">
-        {loading && <div className="text-center">Loading members...</div>}
+      {loading && <Loader/>}
+
         {error && <div className="text-center text-red-500">Error: {error}</div>}
         {data && data.length ? (
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">

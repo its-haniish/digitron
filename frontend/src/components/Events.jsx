@@ -1,6 +1,7 @@
   import React, { useEffect, useState } from 'react'
   import axios from 'axios'
 import SingleCard from './Card';
+import Loader from './Loader';
 
   const Events = () => {
 
@@ -44,7 +45,7 @@ import SingleCard from './Card';
         </header>
 
         <main className="container mx-auto px-4 w-full">  
-        {loading && <div className="text-center">Loading events...</div>}
+        {loading && <Loader/>}
         {error && <div className="text-center text-red-500">Error: {error}</div>}
         {data && data.length ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
