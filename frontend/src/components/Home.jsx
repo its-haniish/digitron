@@ -193,7 +193,7 @@ const Home = () => {
 
 
   return (
-    <div ref={parentDivRef} className="w-full h-[550vh] relative select-none">
+    <div ref={parentDivRef} className="w-full  h-[550vh] relative select-none">
       {/* Loader Overlay */}
       <div
         ref={containerRef}
