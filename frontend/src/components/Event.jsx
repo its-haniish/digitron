@@ -46,7 +46,7 @@ const Event = () => {
           <main className="text-gray-600 body-font">
             <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
               <img
-                className="lg:w-[80%] md:w-3/6 w-5/6 mb-10 lg:h-[20%] object-cover object-center rounded-2xl"
+                className="lg:w-[80%] md:w-3/6 w-5/6 mb-10 lg:h-[20%] h-[30%] object-cover object-center rounded-2xl"
                 alt="hero"
                 src={data.eventPoster}
               />

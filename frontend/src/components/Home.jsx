@@ -257,7 +257,7 @@ const Home = () => {
 </div>
 
       </Link>
-      <div className="absolute z-10 top-[90vh] ">
+      <div className="absolute z-10 top-[75vh] lg:top-[90vh] ">
       {
   loadedComplete ? (
     <div className="flex flex-col items-center">
