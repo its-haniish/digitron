@@ -1209,7 +1209,6 @@ const imageLinks = [
 "https://res.cloudinary.com/dpuz6dhzn/image/upload/v1740287702/frame2/ncdc6we35jhxd9mtskqa.webp",
 "https://res.cloudinary.com/dpuz6dhzn/image/upload/v1740287704/frame2/vuddxv6xd1tdw3on3hjr.webp",
 "https://res.cloudinary.com/dpuz6dhzn/image/upload/v1740287705/frame2/l6ahxrkoa6tru0cte9j4.webp",
-"https://res.cloudinary.com/dpuz6dhzn/image/upload/v1740287706/frame2/nfmbbqa5uvqsc7ss3n5pf.webp"
   ];
   
   export default imageLinks;

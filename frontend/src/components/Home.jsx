@@ -111,7 +111,8 @@ const Home = () => {
       {
         opacity: 1,
         y: 0,
-        duration: 1.5,
+        color:"grey",
+        duration: 1,
         ease: "power2.out",
         onStart: () => {
           const letters = textRef.current.innerText.split("");
@@ -132,10 +133,16 @@ const Home = () => {
       duration: 2,
       ease: "power2.inOut",
     });
+      // Text fade-out before background disappears
+  tl.to(textRef.current, {
+    opacity: 0,
+    duration: 0.8, // Text disappears first
+    ease: "power1.out",
+  });
+
   
     tl.to(containerRef.current, {
-      scale: 0.01,
-      duration: 2,
+      duration: 2.1,
       opacity: 0,
       ease: "power1.out",
     });
@@ -178,7 +185,7 @@ const Home = () => {
         {/* Circuit Animation */}
         <div
           ref={circuitRef}
-          className="absolute w-full h-full bg-black bg-cover opacity-0"
+          className="absolute w-full h-full bg-gray-100  bg-cover opacity-0"
         ></div>
         {/* Boot-Up Text */}
         <h1
