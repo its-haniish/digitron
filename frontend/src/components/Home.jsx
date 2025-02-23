@@ -292,29 +292,33 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center h-screen space-y-6 px-6">
-          <div className="h-fit w-[90%] bg-opacity-40 backdrop-blur-md rounded-lg shadow-xl border flex flex-col items-center justify-center border-white border-opacity-30 py-10 px-5">
-            <h2 className="text-4xl font-semibold mb-6 text-center uppercase">Our Vision & Goals</h2>
-            <p className="text-xl max-w-3xl text-center">
-              At <span className="text-blue-800 font-semibold uppercase">Digitron</span>, we aim to inspire, educate, and nurture the next generation of tech innovators. Our vision is to create a platform
-              where students can transform their ideas into reality, explore new technologies, and work together on impactful projects.
-            </p>
-            <div className="flex justify-center space-x-6 mt-6">
-              <div className="flex items-center space-x-3">
-                <span className="text-2xl">🎯</span>
-                <p className="text-xl">Empower students through hands-on coding experiences.</p>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-2xl">🚀</span>
-                <p className="text-xl">Launch coding bootcamps and hackathons to foster creativity.</p>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-2xl">🤖</span>
-                <p className="text-xl">Encourage the development of cutting-edge technologies and innovations.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="flex flex-col items-center justify-center min-h-screen px-4 py-10">
+  <div className="w-full max-w-4xl bg-opacity-40 backdrop-blur-md rounded-lg shadow-xl border border-white border-opacity-30 p-6 sm:p-10">
+    <h2 className="text-3xl sm:text-4xl font-semibold mb-6 text-center uppercase">
+      Our Vision & Goals
+    </h2>
+    <p className="text-lg sm:text-xl text-center max-w-3xl mx-auto">
+      At <span className="text-blue-800 font-semibold uppercase">Digitron</span>, we aim to inspire, educate, and nurture the next generation of tech innovators. 
+      Our vision is to create a platform where students can transform their ideas into reality, explore new technologies, and work together on impactful projects.
+    </p>
+
+    <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="flex items-center space-x-3">
+        <span className="text-2xl">🎯</span>
+        <p className="text-lg sm:text-xl">Empower students through hands-on coding experiences.</p>
+      </div>
+      <div className="flex items-center space-x-3">
+        <span className="text-2xl">🚀</span>
+        <p className="text-lg sm:text-xl">Launch coding bootcamps and hackathons to foster creativity.</p>
+      </div>
+      <div className="flex items-center space-x-3">
+        <span className="text-2xl">🤖</span>
+        <p className="text-lg sm:text-xl">Encourage the development of cutting-edge technologies and innovations.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
         <div className="flex items-center justify-center h-screen">
           <div className="flex items-end justify-center h-[150vh]">
             <div className="relative group">
