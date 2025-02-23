@@ -8,5 +8,16 @@ export default defineConfig({
   host: true,  // Allows external access
   allowedHosts: ['digitron.rocks'], // Add your domain here
   plugins: [react(), tailwindcss()],
+ server: {
+    port: 8085,      // Set desired port
+    host: '0.0.0.0', // Allows access from any IP
+    strictPort: true, 
+    cors: true,
+    hmr: {
+      clientPort: 8085,
+    },
+    allowedHosts: ['.digitron.rocks'], // Add your domain (use dot prefix for subdomains)
+  }
 });
+
 
