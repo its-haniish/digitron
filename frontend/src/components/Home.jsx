@@ -133,19 +133,16 @@ const Home = () => {
       duration: 2,
       ease: "power2.inOut",
     });
-      // Text fade-out before background disappears
-  tl.to(textRef.current, {
-    opacity: 0,
-    duration: 0.8, // Text disappears first
-    ease: "power1.out",
-  });
 
-  
     tl.to(containerRef.current, {
       duration: 2.1,
       opacity: 0,
       ease: "power1.out",
+      onComplete: () => {
+        containerRef.current.style.display = "none";
+      },
     });
+    
   
     // Scroll animation for intro elements
     tl.to(tweenObj.current, {
