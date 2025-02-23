@@ -44,7 +44,7 @@ const Event = () => {
         )}
         {data ? (
           <main className="text-gray-600 body-font">
-            <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+            <div className="container mx-auto   flex px-5 py-24 items-center justify-center flex-col">
               <img
                 className="lg:w-[80%] md:w-3/6 w-5/6 mb-10 lg:h-[20%] h-[30%] object-cover object-center rounded-2xl"
                 alt="hero"
@@ -108,10 +108,10 @@ const Event = () => {
               </div>
             </div>
             <div classNameName="mx-10">
-              <h1 className="text-3xl font-bold lg:px-28 mb-5">Event Rules :-</h1>
+              <h1 className="text-3xl font-bold  mb-5">Event Rules :-</h1>
               <div className="">
                 {data.eventRules.map((rule, index) => (
-                  <h1 key={index} className="text-xl lg:px-28 leading-9">
+                  <h1 key={index} className="text-xl  leading-9">
                     🎯 {rule}
                   </h1>
                 ))}
@@ -119,10 +119,10 @@ const Event = () => {
             </div>
 
             <div className="flex items-center flex-col">
-              <h1 className="text-3xl w-full font-bold my-10 lg:px-28">
+              <h1 className="text-3xl w-full font-bold my-10 ">
                 Featured Competitions :-
               </h1>
-              <div className="lg:w-[85%] w-full container flex justify-center lg:justify-start gap-5  shrink-0 flex-wrap">
+              <div className="lg:w-full  w-full container flex justify-center lg:justify-start gap-5  shrink-0 flex-wrap">
                 {data.competitions.map((competition) => (
                   <div
                     key={competition._id}
@@ -159,7 +159,7 @@ const Event = () => {
 
             <div className="">
               <div className="">
-                <h1 className="text-3xl font-bold mb-5 lg:px-28 ">Organizers :-</h1>
+                <h1 className="text-3xl font-bold mb-5  ">Organizers :-</h1>
                 <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
                   {data.organizers.map((member) => (
                     <div key={member._id} className="flex flex-col items-center">

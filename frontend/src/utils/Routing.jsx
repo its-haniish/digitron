@@ -7,6 +7,7 @@ import Members from '../components/Members'
 import Event from '../components/Event'
 import MemberBio from '../components/MemberBio'
 import Compition from '../components/Compition'
+import Error from '../components/Error'
 
 const Routing = () => {
   return (
@@ -18,6 +19,8 @@ const Routing = () => {
     <Route path="/member/:id" element={<MemberBio />} />
     <Route path="/event/:id" element={<Event />} />
     <Route path="/compitition/:id" element={<Compition />} />
+    <Route path="*" element={<Error />} />
+
   </Routes>
 
   )
