@@ -13,11 +13,11 @@ const Members = () => {
   const fetchEvents = async () => {
     try {
       const response = await axios.get(`${baseUrl}/all`);
-      console.log("API response:", response.data);
+      // console.log("API response:", response.data);
       // Assuming response.data.data is now an array of members
       setData(response.data.data);
     } catch (err) {
-      console.error("Error fetching members:", err);
+      // console.error("Error fetching members:", err);
       setError(err.message);
     } finally {
       setLoading(false);

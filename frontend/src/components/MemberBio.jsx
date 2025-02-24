@@ -27,7 +27,7 @@ const MemberBio = () => {
     }
   };
 
-  console.log(data);
+  // console.log(data);
   
   useEffect(() => {
     fetchEvents();
@@ -37,18 +37,18 @@ const MemberBio = () => {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <div class="text-gray-600 body-font overflow-hidden  ">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="lg:w-4/5 mx-auto flex flex-wrap">
-        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-96 object-contain lg:object-cover  object-center rounded" src={data.profilePic}></img>
-        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{data.clubMemberName}</h1>
-          <h2 class="text-sm title-font text-gray-900 font-semibold tracking-widest ">Email :- {data.clubMemberEmail}</h2>
-          <h1 class="text-green-500 text-2xl title-font font-medium mb-1">{data.clubMemberPosition}</h1>
+    <div className="text-gray-600 body-font overflow-hidden  ">
+    <div className="container px-5 py-24 mx-auto">
+      <div className="lg:w-4/5 mx-auto flex flex-wrap">
+        <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-96 object-contain lg:object-cover  object-center rounded" src={data.profilePic}></img>
+        <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+          <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{data.clubMemberName}</h1>
+          <h2 className="text-sm title-font text-gray-900 font-semibold tracking-widest ">Email :- {data.clubMemberEmail}</h2>
+          <h1 className="text-green-500 text-2xl title-font font-medium mb-1">{data.clubMemberPosition}</h1>
 
 
          
-          <p class="leading-relaxed">{data.about}</p>
+          <p className="leading-relaxed">{data.about}</p>
 
           <div className=' flex gap-5 mt-5'>
       {data.socialMediaLinks.github && (

@@ -268,27 +268,45 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center h-screen text-zinc-900 space-y-6 px-6">
-          <div className="h-fit bg-opacity-40 backdrop-blur-md rounded-lg shadow-xl border border-white border-opacity-30 p-20">
-            <h1 className="text-4xl font-semibold mb-6 text-center uppercase">What We Do ? </h1>
-            <div className="flex items-center">
-              <span className="text-2xl mr-3">🔥</span>
-              <p className="text-xl"><span className="font-semibold">Workshops & Bootcamps</span> – Master cutting-edge technologies.</p>
+        <div className="flex flex-col items-center justify-center min-h-screen px-4 py-10 text-zinc-900">
+      <div className="bg-white/40 backdrop-blur-md w-full  max-w-lg lg:max-w-4xl rounded-xl shadow-xl border border-white/30 p-8 sm:p-10">
+        <h1 className="text-2xl sm:text-3xl font-semibold mb-6 text-center uppercase  py-2 rounded-md">
+          What We Do?
+        </h1>
+
+        <div className="space-y-4">
+          {[
+            {
+              icon: "🔥",
+              title: "Workshops & Bootcamps",
+              description: "Master cutting-edge technologies.",
+            },
+            {
+              icon: "💡",
+              title: "Hackathons & Competitions",
+              description: "Solve real-world problems with code.",
+            },
+            {
+              icon: "🚀",
+              title: "Projects & Open Source",
+              description: "Build impactful software and contribute to the community.",
+            },
+            {
+              icon: "🤝",
+              title: "Networking & Mentorship",
+              description: "Connect with industry experts and like-minded peers.",
+            },
+          ].map((item, index) => (
+            <div key={index} className="flex items-center space-x-3">
+              <span className="text-2xl">{item.icon}</span>
+              <p className="text-lg sm:text-xl">
+                <span className="font-semibold">{item.title}</span> – {item.description}
+              </p>
             </div>
-            <div className="flex items-center">
-              <span className="text-2xl mr-3">💡</span>
-              <p className="text-xl"><span className="font-semibold">Hackathons & Competitions</span> – Solve real-world problems with code.</p>
-            </div>
-            <div className="flex items-center">
-              <span className="text-2xl mr-3">🚀</span>
-              <p className="text-xl"><span className="font-semibold">Projects & Open Source</span> – Build impactful software and contribute to the community.</p>
-            </div>
-            <div className="flex items-center">
-              <span className="text-2xl mr-3">🤝</span>
-              <p className="text-xl"><span className="font-semibold">Networking & Mentorship</span> – Connect with industry experts and like-minded peers.</p>
-            </div>
-          </div>
+          ))}
         </div>
+      </div>
+    </div>
         <div className="flex flex-col items-center justify-center min-h-screen px-4 py-10">
   <div className="w-full max-w-4xl bg-opacity-40 backdrop-blur-md rounded-lg shadow-xl border border-white border-opacity-30 p-6 sm:p-10">
     <h2 className="text-3xl sm:text-4xl font-semibold mb-6 text-center uppercase">
@@ -338,7 +356,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <footer className="bg-opacity-40 backdrop-blur-md text-center py-4 mt-80 rounded-lg shadow-xl border border-white border-opacity-30">
+        <footer className="bg-opacity-40 backdrop-blur-md text-center  bg-gray-300 lg:py-4  mt-60 lg:mt-80 rounded-lg shadow-xl border  border-white border-opacity-30">
           <p className="text-2xl font-semibold text-zinc-800">
             Developed by <Link to="https://github.com/rishiyadav11" className="font-bold hover:text-sky-600 hover:underline">Rishi Yadav</Link> &amp; <Link to="https://github.com/its-haniish" className="font-bold hover:text-sky-600 hover:underline">Hanish Kumar</Link>
           </p>
