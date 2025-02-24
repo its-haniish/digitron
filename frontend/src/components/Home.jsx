@@ -356,11 +356,13 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <footer className="bg-opacity-40 backdrop-blur-md text-center  bg-gray-300 lg:py-4  mt-60 lg:mt-80 rounded-lg shadow-xl border  border-white border-opacity-30">
+       <div className=" h-[23vh]  flex justify-center items-end mt-60 lg:mt-66">
+       <footer className="bg-opacity-40 backdrop-blur-md text-center w-full  bg-gray-300 lg:py-4 rounded-lg shadow-xl border  border-white border-opacity-30">
           <p className="text-2xl font-semibold text-zinc-800">
             Developed by <Link to="https://github.com/rishiyadav11" className="font-bold hover:text-sky-600 hover:underline">Rishi Yadav</Link> &amp; <Link to="https://github.com/its-haniish" className="font-bold hover:text-sky-600 hover:underline">Hanish Kumar</Link>
           </p>
         </footer>
+       </div>
       </div>
 
       {/* Canvas Animation Background */}
