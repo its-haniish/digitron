@@ -28,12 +28,12 @@ app.use('/phantoms', phantomRoutes);
 
 
 app.get("/treasure", (req, res) => {
-    const searchQuery = req.query.image;
+    const searchQuery=req.query.image;
     try {
-        const allowedImages = ["golang", "kotlin", "java", "git", "swift", "python", "php", "html", "nodejs", "ruby"];
-        
-        if (searchQuery && allowedImages.includes(searchQuery)) {
-            const imagePath = path.resolve(__dirname, `public/treasure/images/${searchQuery}.png`);
+        const allowedImages=["golang", "kotlin", "java", "git", "swift", "python", "php", "html", "nodejs", "ruby"];
+
+        if (searchQuery&&allowedImages.includes(searchQuery)) {
+            const imagePath=`https://digitron.rocks/uploads/treasure/images/${searchQuery}.png`;
             console.log("Serving image from:", imagePath);
             return res.sendFile(imagePath);
         }
