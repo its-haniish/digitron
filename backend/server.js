@@ -32,7 +32,7 @@ app.get("/treasure", (req, res) => {
         const allowedImages=["golang", "kotlin", "java", "git", "swift", "python", "php", "html", "nodejs", "ruby"];
 
         if (searchQuery&&allowedImages.includes(searchQuery)) {
-            const imageUrl=`https://digitron.rocks/uploads/treasure/images/${searchQuery}.png`;
+            const imageUrl=`https://digitron.rocks/uploads/treasure/images/${searchQuery}.tif`;
             console.log("Redirecting to:", imageUrl);
             return res.redirect(imageUrl);  // Redirect instead of sendFile
         }
