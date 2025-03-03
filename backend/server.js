@@ -26,16 +26,15 @@ app.use("/students", studentRoutes);
 app.use('/members', memberRoutes);
 app.use('/phantoms', phantomRoutes);
 
-
 app.get("/treasure", (req, res) => {
     const searchQuery=req.query.image;
     try {
         const allowedImages=["golang", "kotlin", "java", "git", "swift", "python", "php", "html", "nodejs", "ruby"];
 
         if (searchQuery&&allowedImages.includes(searchQuery)) {
-            const imagePath=`https://digitron.rocks/uploads/treasure/images/${searchQuery}.png`;
-            console.log("Serving image from:", imagePath);
-            return res.sendFile(imagePath);
+            const imageUrl=`https://digitron.rocks/uploads/treasure/images/${searchQuery}.png`;
+            console.log("Redirecting to:", imageUrl);
+            return res.redirect(imageUrl);  // Redirect instead of sendFile
         }
 
         return res.status(404).send("<h1>Not Found :) Try Again...</h1>");
@@ -44,8 +43,6 @@ app.get("/treasure", (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 });
-
-
 
 
 // Connect to MongoDB and Start the Server
