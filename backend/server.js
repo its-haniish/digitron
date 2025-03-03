@@ -26,19 +26,27 @@ app.use("/students", studentRoutes);
 app.use('/members', memberRoutes);
 app.use('/phantoms', phantomRoutes);
 
+
 app.get("/treasure", (req, res) => {
-    const searchQuery=req.query.image;
+    const searchQuery = req.query.image;
     try {
-        const allowedImages=["golang", "kotlin", "java", "git", "swift", "python", "php", "html", "nodejs", "ruby"];
-        if (!searchQuery||!allowedImages.includes(searchQuery)) {
-            return res.sendFile(path.join(__dirname, `/public/treasure/images/${searchQuery}.png`));
+        const allowedImages = ["golang", "kotlin", "java", "git", "swift", "python", "php", "html", "nodejs", "ruby"];
+        
+        if (searchQuery && allowedImages.includes(searchQuery)) {
+            const imagePath = path.resolve(__dirname, `public/treasure/images/${searchQuery}.png`);
+            console.log("Serving image from:", imagePath);
+            return res.sendFile(imagePath);
         }
-        return res.status(404).send("<h1>Not Found :) Try Again...</h1>")
+
+        return res.status(404).send("<h1>Not Found :) Try Again...</h1>");
     } catch (error) {
-        console.log(error);
+        console.error(error);
         res.status(500).send("Internal Server Error");
     }
 });
+
+
+
 
 // Connect to MongoDB and Start the Server
 mongoose.connect(process.env.MONGO_URI)
