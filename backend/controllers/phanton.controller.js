@@ -3,8 +3,8 @@ const Phantoms=require("../models/Phantoms");
 // Get All Events
 const getPhantomResults=async (req, res) => {
     try {
-        const events=await Phantoms.find().sort({ adjusted_WPM: -1, accuracy: -1 }); // Apply sorting
-        res.status(200).json({ events });
+        const phantomData=await Phantoms.find().sort({ adjusted_WPM: -1, accuracy: -1 }); // Apply sorting
+        res.status(200).json({ phantomData });
     } catch (error) {
         console.error("Error fetching events:", error);
         res.status(500).json({ message: "Internal Server Error" });
@@ -14,10 +14,10 @@ const getPhantomResults=async (req, res) => {
 
 const createPhantomResult=async (req, res) => {
     try {
-        const event=await Events.create(req.body);
-        return res.status(201).json({ message: "Event created successfully.", event });
+        const event=await Phantoms.create(req.body);
+        return res.status(201).json({ message: "Phantom created successfully.", event });
     } catch (error) {
-        console.error("Error creating event:", error);
+        console.error("Error creating phantom:", error);
         return res.status(500).json({ message: "Internal Server Error", error: error.message });
     }
 };
