@@ -44,6 +44,42 @@ app.get("/treasure", (req, res) => {
     }
 });
 
+app.get("/hunt", (req, res) => {
+    const treeQuery=req.query.tree;
+    const flowerQuery=req.query.flower;
+
+    const allowedTrees=["banana", "coconut", "neem", "mango", "banyan"];
+    const allowedFlowers=["rose", "lavender", "daffodil", "jasmine", "sunflower"];
+
+    try {
+        // Ensure only one query parameter is used at a time
+        if ((treeQuery&&flowerQuery)||(!treeQuery&&!flowerQuery)) {
+            return res.status(400).send("<h1>Invalid Request :) Provide only one query at a time!</h1>");
+        }
+
+        let searchQuery;
+        let category;
+
+        if (treeQuery&&allowedTrees.includes(treeQuery)) {
+            searchQuery=treeQuery;
+            category="tree";
+        } else if (flowerQuery&&allowedFlowers.includes(flowerQuery)) {
+            searchQuery=flowerQuery;
+            category="flower";
+        } else {
+            return res.status(404).send("<h1>Not Found :) Try Again...</h1>");
+        }
+
+        const pdfUrl=`https://digitron.rocks/uploads/treasure/pdf/${searchQuery}.pdf`;
+        console.log(`Redirecting to ${category} PDF:`, pdfUrl);
+        return res.redirect(pdfUrl);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Internal Server Error");
+    }
+});
+
+
 
 // Connect to MongoDB and Start the Server
 mongoose.connect(process.env.MONGO_URI)
