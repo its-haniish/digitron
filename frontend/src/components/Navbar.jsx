@@ -13,7 +13,7 @@ const Navbar = () => {
       <Link to="/" className="flex items-center gap-5">
         <img
           className="w-10 h-10 rounded-full"
-          src="https://media-del2-2.cdn.whatsapp.net/v/t61.24694-24/467336501_496051830119916_7728596386753854699_n.jpg?ccb=11-4&oh=01_Q5AaIDAY5O9Nb4hGjUEzI_XhJFAhsiSF0rDTc_VhOiJrPwrj&oe=67C31746&_nc_sid=5e03e0&_nc_cat=109"
+          src="/logo.enc"
           alt="Logo"
         />
         <h1 className="font-bold text-lg uppercase">Digitron</h1>

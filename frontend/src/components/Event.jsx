@@ -107,8 +107,8 @@ const Event = () => {
     
               </div>
             </div>
-            <div className=" mx-10">
-              <h1 className="text-3xl font-bold  mb-5 ">Event Rules :-</h1>
+            <div classNameName="mx-10">
+              <h1 className="text-3xl font-bold  mb-5">Event Rules :-</h1>
               <div className="">
                 {data.eventRules.map((rule, index) => (
                   <h1 key={index} className="text-xl  leading-9">
@@ -118,7 +118,7 @@ const Event = () => {
               </div>
             </div>
 
-            <div className=" mx-10 flex items-center flex-col">
+            <div className="flex items-center flex-col">
               <h1 className="text-3xl w-full font-bold my-10 ">
                 Featured Competitions :-
               </h1>
@@ -157,7 +157,7 @@ const Event = () => {
               </div>
             </div>
 
-            <div className="mx-10">
+            <div className="">
               <div className="">
                 <h1 className="text-3xl font-bold mb-5  ">Organizers :-</h1>
                 <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
